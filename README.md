@@ -1,2 +1,2 @@
-# BNC-Clustering
-Balanced normalized cut clustering method
+# Link-Prediction 
+Link prediction using clustering
