@@ -1,0 +1,309 @@
+python ./src/ologncc.py -d ./data/karate.tsv -r 0,100
+--------------
+Loading dataset './data/karate.tsv'...
+Dataset successfully loaded in 0 ms
+#vertices: 34
+#edges: 78
+#vertex pairs: 561
+#vertex triples: 5984
+Edge weights randomly generated from [0.0,100.0]
+Global condition (without tot_min): 4.642519426946428 >= 87.41584919218731 ?
+Global condition (including tot_min): 9.012691624394087 >= 87.41584919218731 ?
+Solver: scipy
+--------------
+CC cost of 'whole graph in one cluster' solution: 3586.677472665994 (tot_min: 2451.6666027681367)
+CC cost of 'all singletons' solution: 3921.1091313872253 (tot_min: 2451.6666027681367)
+--------------
+Running KwikCluster algorithm...
+KwikCluster algorithm successfully executed in 0 ms
+CC cost of KwikCluster's output clustering: 3513.319379971157 (tot_min: 2451.6666027681367)
+KwikCluster's output clustering:
+Cluster 1: [1, 5, 11]
+Cluster 2: [2, 18]
+Cluster 3: [9, 31, 33]
+Cluster 4: [3, 29, 34]
+Cluster 5: [6, 7, 17]
+Cluster 6: [20]
+Cluster 7: [4, 8]
+Cluster 8: [23]
+Cluster 9: [22]
+Cluster 10: [25, 26, 32]
+Cluster 11: [24, 28]
+Cluster 12: [13]
+Cluster 13: [10]
+Cluster 14: [16]
+Cluster 15: [27]
+Cluster 16: [12]
+Cluster 17: [21]
+Cluster 18: [15]
+Cluster 19: [30]
+Cluster 20: [14]
+Cluster 21: [19]
+---------------
+O(log n)-approximation algorithm - Building linear program (solver: scipy)...
+Linear program successfully built in 135 ms
+#variables: 561 (must be equal to #vertex pairs, i.e., equal to 561)
+#inequality constraints: 17952 (must be equal to 3 * #vertex triples, i.e., equal to 17952)
+#non-zero entries in cost vector: 78 (must be <= #edges, i.e., <= 78)
+---------------
+O(log n)-approximation algorithm - Solving linear program (solver: scipy)...
+Linear program successfully solved in 1333 ms
+Size of the solution array: 561 (must be equal to #variables)
+Cost of the LP solution: 2754.0419321769195 (tot_min: 2451.6666027681367)
+Cost of the LP solution (according to SciPy): 2754.041932176919 (tot_min: 2451.6666027681367)
+---------------
+O(log n)-approximation algorithm - Rounding the LP solution...
+LP-rounding successfully performed in 1 ms
+CC cost of O(log n)-approximation algorithm's output clustering: 2918.16110077822 (tot_min: 2451.6666027681367)
+O(log n)-approximation algorithm's output clustering:
+Cluster 1: [2, 4, 5, 10, 16, 20, 22, 24, 26, 28, 30, 31, 34]
+Cluster 2: [3, 9, 17, 19, 21, 23, 29, 33]
+Cluster 3: [1, 6, 8, 11, 13, 14, 18, 25, 32]
+Cluster 4: [7]
+Cluster 5: [15]
+Cluster 6: [12]
+Cluster 7: [27]
+
+================================================
+
+python ./src/ologncc.py -d ./data/karate.tsv -r 20,100
+---------------
+Loading dataset './data/karate.tsv'...
+Dataset successfully loaded in 0 ms
+#vertices: 34
+#edges: 78
+#vertex pairs: 561
+#vertex triples: 5984
+Edge weights randomly generated from [20.0,100.0]
+Global condition (without tot_min): 3.456839194552863 >= 71.8911970219276 ?
+Global condition (including tot_min): 10.09799747193502 >= 71.8911970219276 ?
+Solver: scipy
+---------------
+CC cost of 'whole graph in one cluster' solution: 4655.479869314082 (tot_min: 3725.68979361139)
+CC cost of 'all singletons' solution: 4735.1865060528535 (tot_min: 3725.68979361139)
+---------------
+Running KwikCluster algorithm...
+KwikCluster algorithm successfully executed in 0 ms
+CC cost of KwikCluster's output clustering: 4263.322786348318 (tot_min: 3725.68979361139)
+KwikCluster's output clustering:
+Cluster 1: [25, 26, 32]
+Cluster 2: [1, 6, 7, 17]
+Cluster 3: [10, 14, 15, 19, 20, 21, 23, 24, 27, 30, 33, 34]
+Cluster 4: [9, 31]
+Cluster 5: [5, 11]
+Cluster 6: [3, 28]
+Cluster 7: [18]
+Cluster 8: [12]
+Cluster 9: [4, 13]
+Cluster 10: [2, 8]
+Cluster 11: [22]
+Cluster 12: [16]
+Cluster 13: [29]
+---------------
+O(log n)-approximation algorithm - Building linear program (solver: scipy)...
+Linear program successfully built in 148 ms
+#variables: 561 (must be equal to #vertex pairs, i.e., equal to 561)
+#inequality constraints: 17952 (must be equal to 3 * #vertex triples, i.e., equal to 17952)
+#non-zero entries in cost vector: 78 (must be <= #edges, i.e., <= 78)
+---------------
+O(log n)-approximation algorithm - Solving linear program (solver: scipy)...
+Linear program successfully solved in 1428 ms
+Size of the solution array: 561 (must be equal to #variables)
+Cost of the LP solution: 3926.725783857052 (tot_min: 3725.68979361139)
+Cost of the LP solution (according to SciPy): 3926.725783857052 (tot_min: 3725.68979361139)
+---------------
+O(log n)-approximation algorithm - Rounding the LP solution...
+LP-rounding successfully performed in 1 ms
+CC cost of O(log n)-approximation algorithm's output clustering: 4162.3355681939465 (tot_min: 3725.68979361139)
+O(log n)-approximation algorithm's output clustering:
+Cluster 1: [21]
+Cluster 2: [4, 5, 9, 10, 13, 14, 15, 18, 19, 20, 23, 24, 27, 34]
+Cluster 3: [16]
+Cluster 4: [2]
+Cluster 5: [1, 3, 6, 7, 8, 11, 12, 17, 22, 25, 26, 28, 29, 30, 31, 32, 33]
+
+=================================================
+
+python ./src/ologncc.py -d ./data/karate.tsv -r 20,25
+---------------
+Loading dataset './data/karate.tsv'...
+Dataset successfully loaded in 0 ms
+#vertices: 34
+#edges: 78
+#vertex pairs: 561
+#vertex triples: 5984
+Edge weights randomly generated from [20.0,25.0]
+Global condition (without tot_min): 0.22875943645317956 >= 4.719358820709257 ?
+Global condition (including tot_min): 3.2703430731035104 >= 4.719358820709257 ?
+Solver: scipy
+---------------
+CC cost of 'whole graph in one cluster' solution: 1770.726501256217 (tot_min: 1706.3284201608355)
+CC cost of 'all singletons' solution: 1770.2643829156877 (tot_min: 1706.3284201608355)
+---------------
+Running KwikCluster algorithm...
+KwikCluster algorithm successfully executed in 0 ms
+CC cost of KwikCluster's output clustering: 1751.8623273893036 (tot_min: 1706.3284201608355)
+KwikCluster's output clustering:
+Cluster 1: [15]
+Cluster 2: [3, 29]
+Cluster 3: [16, 34]
+Cluster 4: [6, 17]
+Cluster 5: [1, 25, 32, 33]
+Cluster 6: [24, 26, 28]
+Cluster 7: [20]
+Cluster 8: [21]
+Cluster 9: [2, 4, 8, 14, 22, 31]
+Cluster 10: [9]
+Cluster 11: [12]
+Cluster 12: [27, 30]
+Cluster 13: [19]
+Cluster 14: [11]
+Cluster 15: [5]
+Cluster 16: [23]
+Cluster 17: [10]
+Cluster 18: [13]
+Cluster 19: [7]
+Cluster 20: [18]
+---------------
+O(log n)-approximation algorithm - Building linear program (solver: scipy)...
+Linear program successfully built in 137 ms
+#variables: 561 (must be equal to #vertex pairs, i.e., equal to 561)
+#inequality constraints: 17952 (must be equal to 3 * #vertex triples, i.e., equal to 17952)
+#non-zero entries in cost vector: 78 (must be <= #edges, i.e., <= 78)
+---------------
+O(log n)-approximation algorithm - Solving linear program (solver: scipy)...
+Linear program successfully solved in 1356 ms
+Size of the solution array: 561 (must be equal to #variables)
+Cost of the LP solution: 1720.3612673812736 (tot_min: 1706.3284201608355)
+Cost of the LP solution (according to SciPy): 1720.3612673812736 (tot_min: 1706.3284201608355)
+---------------
+O(log n)-approximation algorithm - Rounding the LP solution...
+LP-rounding successfully performed in 1 ms
+CC cost of O(log n)-approximation algorithm's output clustering: 1765.9475464628738 (tot_min: 1706.3284201608355)
+O(log n)-approximation algorithm's output clustering:
+Cluster 1: [11]
+Cluster 2: [17]
+Cluster 3: [6]
+Cluster 4: [1, 2, 3, 4, 5, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+
+================================================
+
+python ./src/ologncc.py -d ./data/karate.tsv -r 20,23
+---------------
+Loading dataset './data/karate.tsv'...
+Dataset successfully loaded in 0 ms
+#vertices: 34
+#edges: 78
+#vertex pairs: 561
+#vertex triples: 5984
+Edge weights randomly generated from [20.0,23.0]
+Global condition (without tot_min): 0.13241283922955144 >= 2.504981258730737 ?
+Global condition (including tot_min): 3.0572562684845823 >= 2.504981258730737 ?
+Solver: scipy
+---------------
+CC cost of 'whole graph in one cluster' solution: 1672.9867741754397 (tot_min: 1640.8371638120723)
+CC cost of 'all singletons' solution: 1682.9711562564833 (tot_min: 1640.8371638120723)
+---------------
+Running KwikCluster algorithm...
+KwikCluster algorithm successfully executed in 0 ms
+CC cost of KwikCluster's output clustering: 1665.5513742671683 (tot_min: 1640.8371638120723)
+KwikCluster's output clustering:
+Cluster 1: [3, 10]
+Cluster 2: [1, 5, 6, 11]
+Cluster 3: [15, 34]
+Cluster 4: [21]
+Cluster 5: [2, 20, 22]
+Cluster 6: [25, 26, 32]
+Cluster 7: [29]
+Cluster 8: [9, 31, 33]
+Cluster 9: [18]
+Cluster 10: [17]
+Cluster 11: [23]
+Cluster 12: [13]
+Cluster 13: [24, 27, 30]
+Cluster 14: [4, 8, 14]
+Cluster 15: [28]
+Cluster 16: [16]
+Cluster 17: [19]
+Cluster 18: [12]
+Cluster 19: [7]
+---------------
+O(log n)-approximation algorithm - Building linear program (solver: scipy)...
+Linear program successfully built in 132 ms
+#variables: 561 (must be equal to #vertex pairs, i.e., equal to 561)
+#inequality constraints: 17952 (must be equal to 3 * #vertex triples, i.e., equal to 17952)
+#non-zero entries in cost vector: 78 (must be <= #edges, i.e., <= 78)
+---------------
+O(log n)-approximation algorithm - Solving linear program (solver: scipy)...
+Linear program successfully solved in 1303 ms
+Size of the solution array: 561 (must be equal to #variables)
+Cost of the LP solution: 1647.2594153555567 (tot_min: 1640.8371638120723)
+Cost of the LP solution (according to SciPy): 1647.2594153555567 (tot_min: 1640.8371638120723)
+---------------
+O(log n)-approximation algorithm - Rounding the LP solution...
+LP-rounding successfully performed in 0 ms
+CC cost of O(log n)-approximation algorithm's output clustering: 1672.9867741754397 (tot_min: 1640.8371638120723)
+O(log n)-approximation algorithm's output clustering:
+Cluster 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+
+==============================================
+
+python ./src/ologncc.py -d ./data/karate.tsv
+---------------
+Loading dataset './data/karate.tsv'...
+Dataset successfully loaded in 0 ms
+#vertices: 34
+#edges: 78
+#vertex pairs: 561
+#vertex triples: 5984
+Global condition (without tot_min): 0.04915797407486633 >= 0.8808933 ?
+Global condition (including tot_min): 0.09659802883600714 >= 0.8808933 ?
+Solver: scipy
+---------------
+CC cost of 'whole graph in one cluster' solution: 40.155106276999994 (tot_min: 26.613870720999994)
+CC cost of 'all singletons' solution: 40.65025862099999 (tot_min: 26.613870720999994)
+---------------
+Running KwikCluster algorithm...
+KwikCluster algorithm successfully executed in 0 ms
+CC cost of KwikCluster's output clustering: 35.23709500299999 (tot_min: 26.613870720999994)
+KwikCluster's output clustering:
+Cluster 1: [1, 2, 3, 8, 28]
+Cluster 2: [27, 34]
+Cluster 3: [18]
+Cluster 4: [16]
+Cluster 5: [25]
+Cluster 6: [6, 11, 17]
+Cluster 7: [10]
+Cluster 8: [13]
+Cluster 9: [15]
+Cluster 10: [5]
+Cluster 11: [4, 14]
+Cluster 12: [19, 33]
+Cluster 13: [22]
+Cluster 14: [23]
+Cluster 15: [21]
+Cluster 16: [20]
+Cluster 17: [9, 31]
+Cluster 18: [26, 29, 32]
+Cluster 19: [30]
+Cluster 20: [12]
+Cluster 21: [7]
+Cluster 22: [24]
+---------------
+O(log n)-approximation algorithm - Building linear program (solver: scipy)...
+Linear program successfully built in 134 ms
+#variables: 561 (must be equal to #vertex pairs, i.e., equal to 561)
+#inequality constraints: 17952 (must be equal to 3 * #vertex triples, i.e., equal to 17952)
+#non-zero entries in cost vector: 78 (must be <= #edges, i.e., <= 78)
+---------------
+O(log n)-approximation algorithm - Solving linear program (solver: scipy)...
+Linear program successfully solved in 1318 ms
+Size of the solution array: 561 (must be equal to #variables)
+Cost of the LP solution: 29.097318562999995 (tot_min: 26.613870720999994)
+Cost of the LP solution (according to SciPy): 29.09731856299999 (tot_min: 26.613870720999994)
+---------------
+O(log n)-approximation algorithm - Rounding the LP solution...
+LP-rounding successfully performed in 1 ms
+CC cost of O(log n)-approximation algorithm's output clustering: 40.155106276999994 (tot_min: 26.613870720999994)
+O(log n)-approximation algorithm's output clustering:
+Cluster 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
